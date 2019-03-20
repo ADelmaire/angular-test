@@ -1,0 +1,9 @@
+.container{
+    display: inline-block;
+    width: 400px;
+    background-color: rgb(107, 192, 192)
+}
+img{
+    width: 360px;
+    margin-left: 20px;
+}

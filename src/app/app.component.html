@@ -1,3 +1,50 @@
+<!-- afficher la liste des enseignants recup du back-->
+
 <h1>
   {{title}}
 </h1>
+<h1>
+  {{s}}
+</h1>
+<ul>
+    <li>{{numero}}</li>
+    <li>{{afficherLaListe}}</li>
+</ul>
+
+<div class='container'>
+  <label>{{nom}} {{prenom}}</label>
+  <img src = '{{photo}}'/>
+  <ul *ngIf ='afficherLaListe'>
+    <li>num: {{numero}}</li>
+    <li>date de naissance: {{dateNaissance}}</li>
+    <li>date d'embauche: {{dateEmbauche}}</li>
+    <li>sexe: {{sexe}}</li>
+    <li>grade: {{grade}}</li>
+  </ul>
+</div>
+
+<div class='container'>
+    <label>{{enseignant.nom}} {{enseignant.prenom}}</label>
+    <img src = '{{enseignant.photo}}'/>
+    <ul *ngIf ='afficherLaListe'>
+      <li>num: {{enseignant.numero}}</li>
+      <li>date de naissance: {{enseignant.dateNaissance}}</li>
+      <li>date d'embauche: {{enseignant.dateEmbauche}}</li>
+      <li>sexe: {{enseignant.sexe}}</li>
+      <li>grade: {{enseignant.grade}}</li>
+    </ul>
+  </div>
+
+<br/>
+<div class='container' *ngFor="let en of enseignants">
+    <label>{{en.nom}} {{en.prenom}}</label>
+    <img src = '{{en.photo}}'/>
+    <ul *ngIf ='afficherLaListe'>
+      <li>num: {{en.numero}}</li>
+      <li>date de naissance: {{en.dateNaissance}}</li>
+      <li>date d'embauche: {{en.dateEmbauche}}</li>
+      <li>sexe: {{en.sexe}}</li>
+      <li>grade: {{en.grade}}</li>
+    </ul>
+  </div>
+
